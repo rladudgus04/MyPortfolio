@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fa/css/all.min.css">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <img src="bgimg/bgimg.jpg" alt="" class="background_img">
+    <script>
+        $(document).ready(function () {
+            $(".slideinleft").eq(0).hide();
+            $(".slideinleft").eq(0).css({'margin-left': '0px'});
+            $(".slideinleft").eq(0).fadeIn(1000);
+            $(window).scroll(function () {
+                $('.slideinleft').each(function (i) {
+
+                    var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    if (bottom_of_window > bottom_of_element) {
+                        $(this).animate({ 'margin-left': '0px' }, 1000);
+                    }
+
+                });
+            });
+        });
+
+    </script>
+    <div class="wrapper">
+        <header>
+            <div class="head">
+                <div class="header-logo">
+                    <div class="logo">YH</div>
+                    <div class="logo-bottom">PORTFOLIO</div>
+                </div>
+                <i class="fas fa-bars"></i>
+                <!-- <div class="header-list">
+                <ul class="list">
+                    <li>test1</li>
+                    <li>test2</li>
+                    <li>test3</li>
+                    <li>test4</li>
+                    <li>test5</li>
+                    <div class="sub">
+                        <ul>
+                            <li>test6</li>
+                            <li>test7</li>
+                            <li>test8</li>
+                        </ul>
+                    </div>
+                </ul>
+            </div> -->
+            </div>
+        </header>
+        <div class="container">
+            <div class="main_text slideinleft">
+                안녕하세요 김영현 입니다.
+            </div>
+            <div class="main_text1 slideinleft">
+                저를 소개하겠습니다.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
