@@ -5,18 +5,22 @@
     text-decoration: none;
     box-sizing: border-box;
 }
- .background_img {
+ /* .background_img {
      position: absolute;
      top: 0;
      left: 0;
      width: 100%;
      height: 100%;
      object-fit: cover;
- }
+ } */
 .wrapper {
     position: relative;
-    
+    height: 960px;
     margin: 0 auto;
+    background-attachment: fixed;
+    background-image: url('bgimg/bgimg.jpg');
+    background-position: center;
+    /* background-size: cover; */
 }
 
 header {
@@ -28,15 +32,20 @@ header {
 .head {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    
+    width: 70%;
     height: 100%;
     margin: 0 auto;
 }
-.head > i {
+.head > div > i {
     line-height: 100px;
     font-size: 30px;
     cursor: pointer;
+    
 }
+
+
+
 .logo{
     font-size: 30px;
     font-weight: 100;
@@ -112,3 +121,119 @@ header {
     max-width:100%;
 }
 
+
+.middle{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(49, 49, 49);
+    position: relative;
+}
+.middle-title{
+    position: absolute;
+    top: 5%;
+    left: 42%;
+    text-align: center;
+    font-size: 60px;
+
+    color: white
+}
+
+.pro-border{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 315px;
+    height: 350px;
+    border: 2px solid white;
+    text-align: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.pro-border:hover{
+    width: 330px;
+    height: 360px;
+
+}
+
+.pro-img{
+    padding-top:10px; 
+    width: 300px;
+    height: 340px;
+    object-fit: cover;
+}
+.pro-info{
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+}
+.pro-info > p {
+    margin: 10px
+}
+.pro-info > p > a{
+    color: #fff;
+}
+
+.project-info{
+    width: 1200px;
+    margin: 0 auto
+}
+
+.project-bg{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    /* background-attachment: fixed;  */
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: -10;
+
+}
+
+.project{
+    height: 2500px;
+    background-image: url('bgimg/middleBgImg.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.project-bg > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.project-wrapper{
+    position: absolute;
+    background-color: rgba(27, 27, 27, 0.8);
+    top: 0;
+    left: 19%;
+    width: 60vw;
+    height: 2500px;
+    margin: 0 auto;
+    color: white;
+}
+
+.project-title{
+    font-weight: 100;
+    font-size: 76px;
+    text-align: center;
+}
+.deemo-pro{
+    margin-top: 130px;
+    margin-left: 80px;
+    padding-left: 10px; 
+    display: flex;
+    border-left: 1px solid white;
+}
+
+.left-menu{
+    position: fixed;
+    top: 0;
+    left: -40%;
+    background-color: #000;
+    color: white;
+    height: 100vh;
+    width: 250px;
+}
