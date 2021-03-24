@@ -20,6 +20,7 @@
     background-attachment: fixed;
     background-image: url('bgimg/bgimg.jpg');
     background-position: center;
+    background-repeat: no-repeat;
     /* background-size: cover; */
 }
 
@@ -128,44 +129,54 @@ header {
     background-color: rgb(49, 49, 49);
     position: relative;
 }
+/*가운데 내 정보*/
 .middle-title{
-    position: absolute;
-    top: 5%;
-    left: 42%;
+    margin: 0 auto;    
     text-align: center;
     font-size: 60px;
 
     color: white
 }
-
+.profile_container{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    padding: 5em;   
+    justify-content: space-around;  
+}
 .pro-border{
-    position: absolute;
-    top: 30%;
-    left: 25%;
+    position: relative;
     width: 315px;
     height: 350px;
-    border: 2px solid white;
     text-align: center;
     align-items: center;
     transition: 0.3s;
 }
-.pro-border:hover{
-    width: 330px;
-    height: 360px;
+.pb{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 315px;
+    height: 350px;
+    border: 2px solid white;
+    transition: 0.3s;
 
+}
+.pro-border:hover .pb{
+    transform: scale(1.1);
 }
 
 .pro-img{
-    padding-top:10px; 
+    left: 50%;
+    top: 50%;
+    position: absolute;
     width: 300px;
     height: 340px;
+    transform: translate(-50%,-50%);
     object-fit: cover;
 }
 .pro-info{
     color: white;
-    position: absolute;
-    top: 35%;
-    left: 50%;
 }
 .pro-info > p {
     margin: 10px
@@ -226,6 +237,7 @@ header {
     padding-left: 10px; 
     display: flex;
     border-left: 1px solid white;
+    transition: 0.3s;
 }
 
 .left-menu{

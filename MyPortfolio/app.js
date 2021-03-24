@@ -23,11 +23,19 @@ window.onload = function(){
         
         
     });
+    let status = false;
     $(".bar-click").click(function(){
-        $(".left-menu").stop().animate({'left' : '0'},200);
+        if(status != true){
+            $(".left-menu").stop().animate({'left' : '0'},200);
+            status = true;
+        }else {
+            $(".left-menu").stop().animate({'left' : '-40%'}, 200);
+            status = false;
+        }
     });
 
     $(".menu-close").click(function(){
+        status = false;
         $(".left-menu").stop().animate({'left' : '-40%'}, 200);
     })
 };
