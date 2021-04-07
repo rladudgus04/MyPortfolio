@@ -14,7 +14,7 @@ window.onload = function(){
 
         });
         $(".deemo-pro").hover(function(e){
-            $(e.currentTarget).stop().animate({'margin-left' : '100px'}, 100);   
+            $(e.currentTarget).stop().animate({'margin-left' : '70px'}, 100);   
         }, function(e){
             $(e.currentTarget).stop().animate({'margin-left' : '50px'}, 100);
         });
@@ -37,5 +37,12 @@ window.onload = function(){
     $(".menu-close").click(function(){
         status = false;
         $(".left-menu").stop().animate({'left' : '-40%'}, 200);
-    })
+    });
+    
+    $('.slick-container').slick({
+        speed: 1000,
+        fade: true,
+        arrows: true
+    });
+    
 };
