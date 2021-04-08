@@ -81,6 +81,7 @@
     opacity: 0.5;
     border: none;
     border-radius: 50px;
+    outline: none;
 }
 
 .slick-next {
@@ -91,6 +92,7 @@
     opacity: 0.5;
     border: none;
     border-radius: 50px;
+    outline: none;
 }
 
 .git-link{

@@ -110,6 +110,17 @@ section{
     background-size: cover;
     position: relative;
 }
+
+.i{
+    width: 100%;
+    height: 100vh;
+    background-position: right center;
+    background-attachment: fixed; 
+    overflow: hidden;
+    background-color: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 section:nth-child(1) {background-image: url(img/bg1.jpg);}
 section:nth-child(2) {background-image: url(img/bg2.jpg);}
 section:nth-child(3) {background-image: url(img/bg3.jpg);}
