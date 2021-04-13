@@ -39,10 +39,16 @@ window.onload = function(){
         $(".left-menu").stop().animate({'left' : '-40%'}, 200);
     });
     
-    $('.slick-container').slick({
-        speed: 1000,
-        fade: true,
-        arrows: true
-    });
+    // $('.slick-container').slick({
+    //     speed: 1000,
+    //     fade: true,
+    //     arrows: true
+    // });
     
+    $(".left-menu").click(function(e){
+        console.log(e.target.dataset.menu);
+        var offset = $(`.${e.target.dataset.menu}`).offset();
+        $("html").animate({'scrollTop' : `${offset.top}`}, 400);
+        console.log(offset.top);
+    });
 };
